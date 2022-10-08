@@ -8,3 +8,4 @@ for i in range(len(values)):
         except IndexError:
             smallest = [values[j],i+j]
     values[i],values[smallest[1]] = values[smallest[1]],values[i]
+    print(values)
