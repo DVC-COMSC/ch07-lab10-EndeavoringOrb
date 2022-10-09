@@ -1,13 +1,14 @@
 values = list(map(int, input().split(" ")))
 print(values)
-smallest = []
 for i in range(len(values)):
-    for j in range(i,len(values)):
-        if j == 0:
-            smallest = values[j]
-            ind = j
-        if values[j] < smallest:
-            smallest = values[j]
-            ind = j
+    smallest = 0
+    for j in range(0,len(values)-i):
+        current_index = i+j
+        if smallest == 0:
+            smallest = values[current_index]
+            ind = current_index
+        if values[current_index] < smallest:
+            smallest = values[current_index]
+            ind = current_index
     values[i],values[ind] = values[ind],values[i]
     print(values)
