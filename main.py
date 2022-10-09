@@ -1,4 +1,5 @@
 values = list(map(int, input().split(" ")))
+print(values)
 smallest = []
 for i in range(len(values)):
     for j in range(i,len(values)):
